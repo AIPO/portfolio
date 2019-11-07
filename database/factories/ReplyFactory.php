@@ -11,10 +11,10 @@ $factory->define(Reply::class, function (Faker $faker) {
         'user_id' => function () {
             return factory(User::class)->create()->id;
         },
-        'thread_id'=>function () {
+        'thread_id' => function () {
             return factory(User::class)->create()->id;
         },
-        'content' => $faker->paragraphs
+        'content' => $faker->paragraph,
 
     ];
 });
