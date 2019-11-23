@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     {
 
 
-        $threads = factory(Thread::class, 50)->create();
-        $threads->each(function ($thread) {
-            factory(Reply::class, 20)->create(['thread_id' => $thread->id]);
-        });
-        //$this->call(UsersTableSeeder::class);
-        //$this->call(ThreadsSeeder::class);
+      //  $threads = factory(Thread::class, 50)->create();
+//        $threads->each(function ($thread) {
+//            factory(Reply::class, 20)->create(['thread_id' => $thread->id]);
+//        });
+        $this->call(UserSeeder::class);
+        $this->call(ThreadsSeeder::class);
     }
 }
