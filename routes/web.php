@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/lang/{locale}','LocalizationController@switch');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
